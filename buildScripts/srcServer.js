@@ -1,12 +1,12 @@
-var express = require('express');
-var path = require('path');
-var open = require('open');
-var webpack = require('webpack');
-var config = require('../webpack.config.dev');
+const express = require('express');
+const path = require('path');
+const open = require('open');
+const webpack = require('webpack');
+const config = require('../webpack.config.dev');
 
-var port = 3000;
-var app = new express();
-var compiler = webpack(config);
+const port = 3000;
+const app = express();
+const compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
